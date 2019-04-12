@@ -4,7 +4,6 @@ import './Button.scss'
 
 class MyButton extends Component {
 
-  //add um sass aqui pra espaçamento lateral
   render() {
     return (
       <Button variant={this.props.cor ? this.props.cor : 'primary'}
