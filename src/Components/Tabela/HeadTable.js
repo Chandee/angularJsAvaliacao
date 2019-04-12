@@ -43,31 +43,22 @@ class HeadTable extends Component {
         let filtrado
         let mydado = this.props.dados
         let resultado = mydado.filter((el)=> {
-            console.log("elpoha", el)
-            console.log("whata a qury", query)
             if(el[name]){
                 filtrado = el[name].normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(query.toLowerCase()) > -1;
-                console.log("o filrto",filtrado)
                 return filtrado ;
 
             }
             return false
         })
-        console.log("whata a resultado", resultado  )
         this.props.attFiltro(resultado)
     }
 
-    finalTeste = (fim) =>{
-        console.log("o que eu to mandando", fim)
-       // this.props.attFiltro(fim.resultado, fim.query)
-      
-    }
+   
 
 
 
     render() {
-        console.log("THISTATE", this.state.Nome)
-        //console.log("opaaa",this.filterItems(this.state.escreve, 'Nome'));
+
 
         return (
             <thead>

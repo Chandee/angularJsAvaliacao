@@ -103,7 +103,6 @@ class Tabela extends Component {
 
   excluir = (param) =>{
     let tempData = [...this.state.dados]
-    console.log("QUAL É A VERADERIRA", param)
     tempData.splice(param, 1)
     this.setState({
       dados: tempData,
@@ -115,24 +114,19 @@ class Tabela extends Component {
   }
 
   retorno = (param) =>{
-    console.log("MYPARAM", param)
     this.setState({
       filtrado: param
     })
   }
 
   attFiltro = (param) =>{
-    console.log("PARAMETRO",param)
     this.setState({
       filtrado: param,
     })
   }
 
 
-  testeFinal = async ()=>{
-    let dadosAtt = await this.state.filtrado
-    return dadosAtt
-  }
+
   render() {
    
     return (
@@ -150,7 +144,6 @@ class Tabela extends Component {
           />
           <tbody>
             {this.state.filtrado.map((d, i) => {
-              console.log("mypos", i)
               return (
                 <TabelaItem
                   selecionado={this.selecionado}

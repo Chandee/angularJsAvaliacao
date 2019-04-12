@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form'
 import Alert from 'react-bootstrap/Alert'
-
 import MyButton from '../Buttons/MyButton';
 
 
 
 class ModalData extends Component {
-
-
 
   constructor(props) {
     super(props)
@@ -22,15 +19,12 @@ class ModalData extends Component {
 
 
   handleChange = (name, value) => {
-    console.log("olhala", this.state.nome)
     this.setState({
       [name]: value
     })
   }
 
   render() {
-    console.log("OHLA O NOMAE", this.props)
-    console.log("MYSTATE", this.state.nome)
     return (
       <Modal show={this.props.show} onHide={this.props.handleClose} >
         <Modal.Header>
@@ -64,7 +58,7 @@ class ModalData extends Component {
             </Form.Group>
           </Form>
         </Modal.Body>
-        <Modal.Footer>{console.log("MYPSOTION", this.props.posicao)}
+        <Modal.Footer>
 
           {this.props.botoes.map(m => {
             if (m.excluValue) {

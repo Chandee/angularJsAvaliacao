@@ -4,7 +4,6 @@ class TabelaItem extends Component{
 
 
   render(){
-    console.log("WHY NOT WORKING", this.props)
     return(
       <tr onClick={()=>{this.props.showModal(); this.props.selecionado(this.props.escolhido, this.props.posicao )}}>
         <th>{this.props.escolhido.id}</th>
